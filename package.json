@@ -1,0 +1,26 @@
+{
+  "name": "hst-cli-tool",
+  "version": "1.0.1",
+  "description": "国际化助手",
+  "main": "index.js",
+  "bin": {
+    "hst-cli-tool": "bin/hst-cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.28.0",
+    "@babel/parser": "^7.28.0",
+    "@babel/traverse": "^7.28.0",
+    "@babel/types": "^7.28.2",
+    "bing-translate-api": "^4.1.0",
+    "chalk": "4.0.0",
+    "commander": "^14.0.0",
+    "inquirer": "^8.0.0",
+    "opencc-js": "^1.0.5",
+    "xlsx": "^0.18.5"
+  }
+}
