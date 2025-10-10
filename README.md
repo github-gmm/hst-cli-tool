@@ -18,7 +18,7 @@
 
 - 自动将中文文本替换为国际化函数调用(如 `lang.$T().$D()` 等)
 - 保留原始代码结构和格式
-- 目前只支持 React 前端框架的国际化方案
+- 目前只支持 js、ts 的国际化方案，暂时不支持 vue
 
 ### **3. Excel 与 JSON 同步**
 
@@ -60,6 +60,8 @@ hst-cli-tool
 npx hst-cli-tool i18n_s common.test
 ```
 
+当在 pages 目录下执行命令后，首先会扫描 pages 文件夹里后缀为【js、ts、jsx、sx】的全部文件；接下来会把文件用工具解析成 ast 树找出中文文本；然后选择要翻译的语言种类【目前提供：中文简体、中文繁体、英文】；最后会生成 json 翻译文件，如图所示：
+
 <img src="./img/cli_2.png" />
 
 ### 2. 智能代码转换
@@ -68,6 +70,8 @@ npx hst-cli-tool i18n_s common.test
 npx hst-cli-tool i18n_r
 ```
 
+当在 pages 目录下执行命令后，首先会扫描 pages 文件夹里后缀为【js、ts、jsx、sx】的全部文件；接下来找出 pages 文件里是 zh_CN.json 的全部文件得到需要替换的中文和中文 code 码；然后把需要替换的文件中未替换过的中文换成国际化函数调用的格式【`lang.$T().$D()`】，如图所示：
+
 <img src="./img/cli_3.png" />
 
 ### 3. Excel 与 JSON 同步
@@ -75,5 +79,7 @@ npx hst-cli-tool i18n_r
 ```
 npx hst-cli-tool excel_to_json lang.xlsx
 ```
+
+当在 pages 目录下执行命令后，首先会扫描 pages 文件夹里后缀为【json】的全部文件；接下来会找到命令行中输入的 excel 文件【lang_admin.xlsx】，然后选择需要比较的 key【code、zh_CN】，最后比较出不同的就把 json 文件中的替换成 excel 最新的翻译，如图所示：
 
 <img src="./img/cli_4.png" />
