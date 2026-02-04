@@ -10,6 +10,7 @@ const replaceI18n = require("./replaceI18n");
 const replaceJson = require("./replaceJson");
 const { isExistFile } = require("../utils/file/oprationFile");
 const chalk = require("chalk");
+const cloneTemp = require("./cloneTemp");
 
 // 定义指令 i18n_s <prefix>
 program
@@ -55,6 +56,13 @@ program
     console.log(newAllFiles);
     console.log(`上面 ${newAllFiles.length} 个文件需替换翻译文案`);
     replaceJson(allFiles, excelPath)
+  });
+// 定义指令 clone_template <gitUrl> <branch>
+program
+  .command('clone_template <gitUrl> <branch>')
+  .description('克隆模板仓库 gitUrl: ')
+  .action((gitUrl, branch) => {
+    cloneTemp({gitUrl, branch})
   });
 
 // 解析命令行参数

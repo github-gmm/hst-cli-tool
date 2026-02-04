@@ -26,6 +26,9 @@ importers:
       chalk:
         specifier: 4.0.0
         version: 4.0.0
+      child_process:
+        specifier: ^1.0.2
+        version: 1.0.2
       commander:
         specifier: ^14.0.0
         version: 14.0.0
@@ -170,6 +173,9 @@ packages:
 
   chardet@2.1.0:
     resolution: {integrity: sha512-bNFETTG/pM5ryzQ9Ad0lJOTa6HWD/YsScAR3EnCPZRPlQh77JocYktSHOUHelyhm8IARL+o4c4F1bP5KVOjiRA==}
+
+  child_process@1.0.2:
+    resolution: {integrity: sha512-Wmza/JzL0SiWz7kl6MhIKT5ceIlnFPJX+lwUGj7Clhy5MMldsSoJR0+uvRzOS5Kv45Mq7t1PoE8TsOA9bzvb6g==}
 
   cli-cursor@3.1.0:
     resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==}
@@ -609,6 +615,8 @@ snapshots:
       supports-color: 7.2.0
 
   chardet@2.1.0: {}
+
+  child_process@1.0.2: {}
 
   cli-cursor@3.1.0:
     dependencies:

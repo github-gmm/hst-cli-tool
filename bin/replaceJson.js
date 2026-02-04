@@ -4,7 +4,6 @@ const path = require('path');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const readExcel = require('../utils/file/readExcel');
-const getAllFiles = require('../utils/common/getAllFiles');
 const { readFileContent, writeFileContent } = require('../utils/file/oprationFile');
 const getZhCnCode = require('../utils/common/getZhCnCode');
 
